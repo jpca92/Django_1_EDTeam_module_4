@@ -1,0 +1,4 @@
+django 
+djangorestframework
+couldinary
+djangorestframework-simplejwt

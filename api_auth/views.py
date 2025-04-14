@@ -12,6 +12,10 @@ from rest_framework.authentication import (
     TokenAuthentication,
 )
 
+# JWTAuthentication is a class that provides authentication using JSON Web Tokens
+
+from rest_framework_simplejwt.authentication import JWTAuthentication
+
 
 class UserView(generics.ListCreateAPIView):
     queryset = User.objects.all()
@@ -19,5 +23,8 @@ class UserView(generics.ListCreateAPIView):
 
     # This part is for authentication and permission classes that are used to check if the user is authenticated and has permission to access the view
     # authentication_classes = [BasicAuthentication, SessionAuthentication, TokenAuthentication]
-    authentication_classes = [TokenAuthentication]
+    # authentication_classes = [TokenAuthentication]
+    # 
+    authentication_classes = [JWTAuthentication]
+    # This part is for permission classes that are used to check if the user is authenticated and has permission to access the view using JWT
     permission_classes = [IsAuthenticated]
