@@ -2,3 +2,4 @@ django
 djangorestframework
 couldinary
 djangorestframework-simplejwt
+drf-yasg
